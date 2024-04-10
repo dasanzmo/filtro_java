@@ -268,7 +268,7 @@ public class CompraModel implements CRUD {
 
         //2. Variable booleana para medir el estado de la eliminación
         boolean noStock = false;
-        int stock = 0;
+        int stock;
 
         //3. Abrir la conexión
         Connection objConnection = ConfigDB.openConnection();
