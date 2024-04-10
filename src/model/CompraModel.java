@@ -276,9 +276,7 @@ public class CompraModel implements CRUD {
         try {
             //4. Escribir la sentencia SQL
             String sql = """
-                    SELECT * FROM compra
-                    INNER JOIN producto ON compra.id_producto = producto.id_producto
-                    WHERE compra.id_compra = ?;
+                    SELECT * FROM producto WHERE producto.id_producto = ?;
                     """;
 
             //5. Preparamos el statement

@@ -41,6 +41,7 @@ public class Main {
                                     5. 🔎 Search purchases by product
                                     6. 👈 Go Back
                                     \n
+                                    
                                 """);
 
                         // Switch Shopping Admin

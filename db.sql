@@ -58,11 +58,10 @@ CREATE TABLE compra(
 /*HAGO UNA CONSULTA Y VERIFICO LA TABLA TIENDA*/
 SELECT * from compra INNER JOIN cliente on compra.id_cliente = cliente.id_cliente;
 
-
-/*AGREGO VALORES A LA TABLA COMPRA*/
-INSERT INTO compra(id_cliente, id_producto,cantidad) VALUES 
-(1,2,50),
-(2,1,100);
+/*AGREGO VALORES A LA TABLA TIENDA*/
+INSERT INTO tienda(nombre, ubicacion) VALUES 
+("D'moda Outlet Guayabal","Guayabal"),
+("D'moda Outlet Poblado", "Poblado");
 
 /*INSERTO VALORES A LA TABLA PRODUCTO*/
 INSERT INTO producto(nombre, precio, id_tienda) VALUES 
@@ -70,15 +69,15 @@ INSERT INTO producto(nombre, precio, id_tienda) VALUES
 ("Tenis Diesel Blancos",120.500, 2);
 
 /*ACTUALIZO VALORES EN LA TABLA PRODUCTO EN LA COLUMNA STOCK*/
-UPDATE producto SET stock = 100 WHERE 'id_producto' = '1';
-UPDATE producto SET stock = 50 WHERE 'id_producto' = '2';
-
-/*AGREGO VALORES A LA TABLA TIENDA*/
-INSERT INTO tienda(nombre, ubicacion) VALUES 
-("D'moda Outlet Guayabal","Guayabal"),
-("D'moda Outlet Poblado", "Poblado");
+UPDATE producto SET stock = 100 WHERE id_producto = 1;
+UPDATE producto SET stock = 50 WHERE id_producto = 2;
 
 /*INSERTO VALORES EN LA TABLA CLIENTE*/
 INSERT INTO cliente(nombre, apellido, email) VALUES 
 ("Daniel","Sanchez","danielsanchezm92@gmail.com"),
 ("Susana","Duque","susanaduque@gmail.com");
+
+/*AGREGO VALORES A LA TABLA COMPRA*/
+INSERT INTO compra(id_cliente, id_producto,cantidad) VALUES 
+(1,2,50),
+(2,1,100);

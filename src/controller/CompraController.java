@@ -74,15 +74,15 @@ public class CompraController {
 
         int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Insert product quantity"));
 
+        // Asigno los valores al objeto Compra y sus métodos set
+        objCompra.setId_producto(id_producto);
+        objCompra.setId_cliente(id_cliente);
+        objCompra.setCantidad(cantidad);
+
         // llamo el método de validar stock
         boolean flag = this.objCompraModel.validateStock(cantidad, id_producto);
 
         if(!flag){
-            // Asigno los valores al objeto Compra y sus métodos set
-            objCompra.setId_producto(id_producto);
-            objCompra.setId_cliente(id_cliente);
-            objCompra.setCantidad(cantidad);
-
             // Inserto el objeto Compra y lo casteo con el tipo de objeto Compra
             objCompra = (Compra) this.objCompraModel.insert(objCompra);
 
